@@ -10,10 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2 
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: List directory contents
+        run: ls
 
       - name: cd to backend folder
-        run: cd /home/dnschanger/dns-changer/backend
+        run: cd home/dnschanger/dns-changer/backend
 
       - name: Activate Virtualenv
         run: source venv/bin/activate
