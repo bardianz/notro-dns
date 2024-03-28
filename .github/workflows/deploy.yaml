@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2 
 
+      - name: Activate Virtualenv
+        run: source ../venv/bin/activate 
+
       - name: Install Python Dependencies
         run: cd backend && pip install -r requirements.txt
         
