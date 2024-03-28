@@ -20,7 +20,7 @@ jobs:
         
 
       - name: Install Python Dependencies
-        run: cd backend && pip install -r requirements.txt
+        run: pwd && cd backend && pip install -r requirements.txt
         
       - name: Update code
         run: git pull
