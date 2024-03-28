@@ -13,17 +13,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: List directory contents
-        run: ls
+      # - name: List directory contents
+      #   run: ls
 
-      - name: cd to backend folder
-        run: cd backend
+      # - name: cd to backend folder
+      #   run: cd backend
 
       - name: List directory in backend
-        run: ls
+        working-directory: ./backend/venv/bin/
+        run: source activate
 
-      - name: Activate Virtualenv
-        run: source venv/bin/activate
+      # - name: Activate Virtualenv
+      #   run: source venv/bin/activate
         
 
       - name: Install Python Dependencies
