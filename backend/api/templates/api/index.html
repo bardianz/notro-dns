@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DNS Services</title>
 </head>
-<body>  
-<ol>
-    {% for service in services %}
-    <li>
-        <ul>
-            <li>
 
-        {{ service.name }}
-    </li>
-            <li>
+<body>
+    <ol>
+        {% for service in services %}
+        <li>
+            <ul>
+                <li>
 
-        {{ service.prefred_ip }}
-    </li>
-            <li>
+                    {{ service.name }}
+                </li>
+                <li>
 
-        {{ service.alternate_ip }}
-    </li>
+                    {{ service.prefred_ip }}
+                </li>
+                <li>
 
-        </ul>
-    </li>
-    {% endfor %}
-</ol>
+                    {{ service.alternate_ip }}
+                </li>
+
+            </ul>
+        </li>
+        {% endfor %}
+    </ol>
 
 </body>
+
 </html>
