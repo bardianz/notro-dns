@@ -12,11 +12,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2 
 
-      - name: cd
-        run: cd backend/venv/bin/activate
+      - name: cd to backend folder
+        run: cd /home/dnschanger/dns-changer/backend
 
       - name: Activate Virtualenv
-        run: source activate
+        run: source venv/bin/activate
         
 
       - name: Install Python Dependencies
