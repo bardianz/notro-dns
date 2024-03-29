@@ -28,7 +28,7 @@ def webhook_git_pull(request):
 
 
         subprocess.run(['git', 'pull'])
-        return Response(None,status=status.HTTP_200_OK)
+        return Response({"pwd" : pwd_output},status=status.HTTP_200_OK)
     else:
         return Response(None,status=status.HTTP_400_BAD_REQUEST,)
     
