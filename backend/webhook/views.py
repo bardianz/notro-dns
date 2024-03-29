@@ -11,11 +11,7 @@ def webhook_git_pull(request):
         # subprocess.run(['cd', 'dnschanger/dns-changer'])
 
 
-        try:
-            result = subprocess.run(["pwd"], shell=True, check=True, stdout=subprocess.PIPE, text=True)
-            pwd_output = result.stdout.strip()
-        except subprocess.CalledProcessError as e:
-            return Response({"error": e , "pwd" : pwd_output}, status=status.HTTP_406_NOT_ACCEPTABLE)
+        
 
         directory = 'dnschanger/dns-changer'
         try:
@@ -25,6 +21,12 @@ def webhook_git_pull(request):
         except subprocess.CalledProcessError as e:
             print(f"Error {e}")
             return Response({"error": e},status=status.HTTP_406_NOT_ACCEPTABLE)
+        
+        try:
+            result = subprocess.run(["pwd"], shell=True, check=True, stdout=subprocess.PIPE, text=True)
+            pwd_output = result.stdout.strip()
+        except subprocess.CalledProcessError as e:
+            return Response({"error": e , "pwd" : pwd_output}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
 
         subprocess.run(['git', 'pull'])
