@@ -10,13 +10,18 @@
 <body>
 
     <div>
-            <h2>API:</h2>
-            <a href="{% url 'api_home' %}">Go to API page</a>
-            
+            <h1>DNS Services</h1>
+    </div>
+
+    <div>
+            <h2>Our API page:</h2>
+            <a href="{% url 'api_home' %}">Go to API page</a>            
     </div>
 
     <div>
         <ol>
+            <h2>List of DNS services:</h2>
+
             {% for service in services %}
             <li>
                 <ul>
