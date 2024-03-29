@@ -8,7 +8,6 @@ from rest_framework import status
 @api_view(['POST'])
 def webhook_handler(request):
     if request.method == 'POST':
-        print("before cd --------------------------------------")
         subprocess.run(['cd', '/home/dnschanger/dns-changer/backend'])
         print("after cd --------------------------------------")
         subprocess.run(['git', 'pull'])
