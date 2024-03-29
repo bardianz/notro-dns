@@ -21,11 +21,10 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from api.views import index_page
-from .. import webhook_handler
 
 urlpatterns = [
-    path('webhook/',webhook_handler ),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
+    path('webhook/', include('webhook.urls')),
     path('', index_page),
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

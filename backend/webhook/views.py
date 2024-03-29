@@ -1,3 +1,7 @@
+from django.shortcuts import render
+
+# Create your views here.
+
 import subprocess
 from django.http import HttpResponse, HttpResponseBadRequest
 def webhook_handler(request):
