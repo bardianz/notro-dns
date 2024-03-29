@@ -4,13 +4,12 @@ from rest_framework.response import Response
 from rest_framework import status
 from django.core.management import call_command
 
-import os
 
 
 @api_view(['POST'])
 def webhook_handler(request):
     if request.method == 'POST':
-        os.chdir("/home/dnschanger/dns-changer/backend")
+        subprocess.run(['cd', '/home/dnschanger/dns-changer/backend'])
         print("after cd --------------------------------------")
         subprocess.run(['git', 'pull'])
         subprocess.run(['cd', '/home/dnschanger/dns-changer/backend'])
