@@ -8,7 +8,7 @@ from rest_framework import status
 def webhook_handler(request):
     if request.method == 'POST':
         subprocess.run(['git', 'pull'])
-        subprocess.run(['touch', ' /var/www/your_domain_wsgi.py'])
+        subprocess.run(['touch', '/var/www/your_domain_wsgi.py'])
         return Response(None,status=status.HTTP_200_OK)
     else:
         return Response(None,status=status.HTTP_400_BAD_REQUEST)
