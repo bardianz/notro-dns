@@ -1,0 +1,27 @@
+# itself:
+gitignore
+
+# venv:
+/venv/
+
+
+# pycache:
+dnschanger/__pycache__/
+api/__pycache__/
+/api/migrations/__pycache__/
+backend/webhook/migrations/__pycache__/
+backend/webhook/__pycache__/
+# env:
+.env
+
+
+# db:
+db.sqlite3
+
+# others:
+runserver.bat
+
+
+.vscode/settings.json
+
+
