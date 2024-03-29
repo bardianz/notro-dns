@@ -4,9 +4,9 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = 'django-insecure-w75a_z9&nkcbnror_qq)s#2a&c5!6mdf+d$nv1qnuihlh+xlet'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+
 DEBUG = config("DEBUG", default=False, cast=bool)
 
 
@@ -126,6 +126,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
