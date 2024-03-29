@@ -8,17 +8,27 @@
 </head>
 
 <body>
-    <ol>
-        {% for service in services %}
-        <li>
-            <ul>
-                <li>Name: {{ service.name }}</li>
-                <li>Prefred IP :{{ service.prefred_ip }}</li>
-                <li>Alternate IP : {{ service.alternate_ip }}</li>
-            </ul>
-        </li>
-        {% endfor %}
-    </ol>
+
+    <div>
+            <h2>API:</h2>
+            <a href="{% url 'api_home' %}">Click</a>
+    </div>
+
+    <div>
+        <ol>
+            {% for service in services %}
+            <li>
+                <ul>
+                    <li>Name: {{ service.name }}</li>
+                    <li>Prefred IP :{{ service.prefred_ip }}</li>
+                    <li>Alternate IP : {{ service.alternate_ip }}</li>
+                </ul>
+            </li>
+            {% endfor %}
+        </ol>
+    </div>
+
+
 
 </body>
 

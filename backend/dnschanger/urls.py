@@ -26,5 +26,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('webhook/', include('webhook.urls')),
-    path('', index_page),
+    path('', index_page,name="home_page"),
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
