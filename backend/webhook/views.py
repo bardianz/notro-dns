@@ -17,7 +17,6 @@ def webhook_git_pull(request):
         try:
             # اجرای دستور cd در یک فرآیند فرعی
             subprocess.run(["cd", directory], shell=True, check=True)
-            print("تغییر دایرکتوری با موفقیت انجام شد.")
         except subprocess.CalledProcessError as e:
             print(f"Error {e}")
             return Response({"error": e},status=status.HTTP_406_NOT_ACCEPTABLE)
