@@ -9,7 +9,10 @@ from django.core.management import call_command
 @api_view(['POST'])
 def webhook_handler(request):
     if request.method == 'POST':
+        subprocess.run(['cd', '/home/dnschanger/dns-changer'])
         subprocess.run(['git', 'pull'])
+        subprocess.run(['cd', '/home/dnschanger/dns-changer/backend'])
+
         # subprocess.run(['touch', '/var/www/your_domain_wsgi.py'])
         call_command('runserver', '--noreload')
         return Response(None,status=status.HTTP_200_OK)
