@@ -2,7 +2,6 @@ import subprocess
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from django.core.management import call_command
 
 
 
@@ -17,7 +16,6 @@ def webhook_handler(request):
         print("before reload --------------------------------------")
 
         subprocess.run(['touch', '/var/www/your_domain_wsgi.py'])
-        call_command('runserver', '--noreload')
         print("after reload --------------------------------------")
 
         return Response(None,status=status.HTTP_200_OK)
