@@ -17,7 +17,7 @@ def webhook_git_pull(request):
 @api_view(['POST'])
 def webhook_reloader(request):
     if request.method == 'POST':
-        subprocess.run(['touch', '/var/www/your_domain_wsgi.py'])
+        subprocess.run(['touch', '/var/www/dnschanger_pythonanywhere_com_wsgi.py'])
         return Response(None,status=status.HTTP_200_OK)
     else:
         return Response(None,status=status.HTTP_400_BAD_REQUEST)
