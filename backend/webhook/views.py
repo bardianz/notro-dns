@@ -13,7 +13,7 @@ def webhook_git_pull(request):
 
         
 
-        directory = 'dnschanger/dns-changer'
+        directory = 'dns-changer'
         try:
             # اجرای دستور cd در یک فرآیند فرعی
             subprocess.run(["cd", directory], shell=True, check=True)
