@@ -29,3 +29,6 @@ def all_services(request):
         services = Service.objects.all()
         serializer = ServiceSerializer(services,many=True)
         return Response(serializer.data,status=status.HTTP_200_OK)
+    
+
+
