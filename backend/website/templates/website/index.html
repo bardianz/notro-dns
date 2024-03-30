@@ -27,12 +27,12 @@
         <h2>List of DNS services:</h2>
 
         <ol>
-            {% for service in services %}
+            {% for server in servers %}
             <li>
                 <ul>
-                    <li>Name: {{ service.name }}</li>
-                    <li>Prefred IP :{{ service.prefred_ip }}</li>
-                    <li>Alternate IP : {{ service.alternate_ip }}</li>
+                    <li>Name: {{ server.name }}</li>
+                    <li>Prefred IP :{{ server.prefred_ip }}</li>
+                    <li>Alternate IP : {{ server.alternate_ip }}</li>
                     <li>-------------------------</li>
                 </ul>
             </li>

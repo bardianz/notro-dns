@@ -5,11 +5,11 @@ from website.models import HelpPage
 
 def index_page(request):
     try:
-        services = Server.objects.all()
+        servers = Server.objects.all()
     except Server.DoesNotExist:
         raise Http404("Service not exist")
 
-    return render(request, "website/index.html", {"services": services})
+    return render(request, "website/index.html", {"servers": servers})
 
 def help_page(request):
     try:
