@@ -11,7 +11,8 @@ api/__pycache__/
 /api/migrations/__pycache__/
 backend/webhook/migrations/__pycache__/
 backend/webhook/__pycache__/
-webhook/__pycache__/
+website/migrations/__pycache__/
+website/__pycache__/
 
 # env:
 .env
