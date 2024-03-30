@@ -4,3 +4,6 @@ from django.db import models
 
 class HelpPage(models.Model):
     content = models.TextField()
+
+    def __str__(self) -> str:
+        return "STATIC body content for Help page"
