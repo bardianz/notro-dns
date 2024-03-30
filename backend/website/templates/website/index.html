@@ -1,47 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNS Services</title>
-</head>
+{% block content %}
 
-<body>
 
-    <div>
-            <h1>DNS Services</h1>
-            <h4>Hi, this is a free website for all persian programmers, gamers, ...</h4>
+    <div class="container">
+        <div class="div my-2 p-2">
+            <h2>List of DNS Servers:</h2>
+            <div class="list-group">
+
+                {% for server in servers %}
+                <a href="#" class="list-group-item list-group-item-action">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Name: {{ server.name }}</h5>
+                        <span class="badge text-body-secondary rounded-pill">Active</span>
+
+                    </div>
+                    <p class="mb-1">Prefred IP :{{ server.prefred_ip }}</p>
+                    <p class="mb-1">Alternate IP : {{ server.alternate_ip }}</p>
+                    <small class="text-body-secondary">Desc</small>
+                </a>
+                {% endfor %}
+            </div>
+
+        </div>
 
     </div>
-
-    <div>
-            <h3>Our API page: <a href="{% url 'api_home' %}"> Go to API page</a>      </h3>         
-    </div>
-
-    <div>
-            <h4> <a href="https://github.com/bardianz/dns-changer"> Github page</a>      </h4>         
-    </div>
-
-    <div>
-        <h2>List of DNS services:</h2>
-
-        <ol>
-            {% for server in servers %}
-            <li>
-                <ul>
-                    <li>Name: {{ server.name }}</li>
-                    <li>Prefred IP :{{ server.prefred_ip }}</li>
-                    <li>Alternate IP : {{ server.alternate_ip }}</li>
-                    <li>-------------------------</li>
-                </ul>
-            </li>
-            {% endfor %}
-        </ol>
-    </div>
+</div>
 
 
 
-</body>
-
-</html>
+{% endblock %}

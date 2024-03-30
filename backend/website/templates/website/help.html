@@ -1,34 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DNS Services</title>
-</head>
+{% block content  %}
 
-<body>
+<div class="container">
+    <div class="alert alert-primary my-2" role="alert" dir="auto">
+      به   راهنمای استفاده از سرویس تغییر DNS خوش آمدید.
+      </div>
 
-    <div>
-        <div>
-            <h1>Home page: <a href="{% url 'home_page' %}"> Home</a>      </h1>         
-    </div>
-          
-    </div>
+
+      
+
+
 
     <div>
-            <h4> <a href="https://github.com/bardianz/dns-changer"> Github page</a>      </h4>         
-    </div>
-
-    <div>
-        <h2>List of DNS services:</h2>
         <p dir="auto">
             {{help_content.content}}
         </p>
     </div>
 
+</div>
 
 
-</body>
-
-</html>
+    {% endblock %}
