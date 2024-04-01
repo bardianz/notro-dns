@@ -5,7 +5,7 @@ from django.db import models
 
 class Server(models.Model):
     name = models.CharField(max_length=200)
-    prefred_ip = models.CharField(max_length=15)
+    preferred_ip = models.CharField(max_length=15)
     alternate_ip = models.CharField(max_length=15)
 
     def __str__(self) -> str:
